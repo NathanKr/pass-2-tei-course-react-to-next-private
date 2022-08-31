@@ -1,5 +1,7 @@
 import { FC, ReactNode } from "react";
-import styles from '../../styles/Layout.module.css'
+import styles from 'styles/Layout.module.css'
+import Footer from 'src/components/Footer'
+import Top from 'src/components/Top'
 
 interface IProps{
     children : ReactNode
@@ -8,11 +10,9 @@ interface IProps{
 const Layout : FC<IProps> = ({ children }) => {
     return (
       <div className={styles.App}>
-        {/* <Navbar /> */}
-        <h2>Put here Navbar</h2>
+        <Top/>
         <main>{children}</main>
-        <h2>Put here Footer</h2>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     )
   }

@@ -1,70 +1,94 @@
-import  { useState } from "react";
-import Home from "./Home";
-import Contact from "./Contact";
-import Courses from "./Courses";
-import Testimonials from "./Testimonials";
-import Events from "./Events";
-import About from "./About";
-import Mentoring from "./Mentoring";
-import { Switch, Route, Link } from "react-router-dom";
-import "./Top.css";
-
+import { useState } from "react";
+import styles from "styles/Top.module.css";
 import { Navbar, Nav } from "react-bootstrap";
+import Link from "next/link";
 
 const Top = () => {
   const [navExpended, setNavExpended] = useState(false);
 
   return (
-    <div className="Top">
-      <header className="header">
+    <div className={styles.Top}>
+      <header className={styles.header}>
         {
-          <Navbar expanded={navExpended} collapseOnSelect expand="xl" variant="dark">
+          <Navbar
+            expanded={navExpended}
+            collapseOnSelect
+            expand="xl"
+            variant="dark"
+          >
             <Navbar.Brand>
               <h2>
-                <span className="nameColor">Nathan</span> Krasney
+                <span className={styles.nameColor}>Nathan</span> Krasney
               </h2>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" 
-            onClick={() => setNavExpended(navExpended ? false : true)}
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              onClick={() => setNavExpended(navExpended ? false : true)}
             />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto"></Nav>
               <Nav>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/">
-                  Home
+                <Link href="/">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    Home
+                  </a>
                 </Link>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/About">
-                  About
+                <Link href="/About">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    About
+                  </a>
                 </Link>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/Contact">
-                  Contact
+                <Link href="/Contact">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    Contact
+                  </a>
                 </Link>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/Courses">
-                  Courses
+                <Link href="/Courses">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    Courses
+                  </a>
                 </Link>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/Mentoring">
-                  Mentoring
+                <Link href="/Mentoring">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    Mentoring
+                  </a>
                 </Link>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/Testimonials">
-                  Testimonials
+                <Link href="/Testimonials">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    Testimonials
+                  </a>
                 </Link>
-                <Link onClick={() =>setNavExpended(false)} className="navigationLink" to="/Events">
-                  Events
+                <Link href="/Events">
+                  <a
+                    onClick={() => setNavExpended(false)}
+                    className={styles.navigationLink}
+                  >
+                    Events
+                  </a>
                 </Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
         }
       </header>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/Courses" component={Courses} />
-        <Route exact path="/Mentoring" component={Mentoring} />
-        <Route exact path="/Testimonials" component={Testimonials} />
-        <Route exact path="/Events" component={Events} />
-      </Switch>
     </div>
   );
 };
