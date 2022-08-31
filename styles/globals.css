@@ -1,0 +1,29 @@
+ /* -- from react -> index.css */
+
+:root {
+  --name-color: #DF292D;
+  --bottom-footer: calc(100vh - 3rem);
+  --black-color: #000;
+  --white-color: #fff;
+}
+
+*,
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* from react App.css */
+.App {
+  background-color: lightgrey;
+}
+
+.App .container {
+  display: flex;
+  flex-direction: column;
+}

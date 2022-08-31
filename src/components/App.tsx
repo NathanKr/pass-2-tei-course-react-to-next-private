@@ -4,6 +4,8 @@ import Top from "./Top.jsx";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./Footer";
 
+// todo change to Layout.tsx
+
 function App() {
   return (
     <BrowserRouter>
