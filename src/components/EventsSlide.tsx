@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import IEvent from "../Interfaces/IEvent";
-import "./EventsSlide.css";
+import IEvent from "src/Interfaces/IEvent";
+import styles from "styles/EventsSlide.module.css";
 
 const EventsSlide = () => {
   const [EventsSildeArray, setEventsSildeArray] = useState<IEvent[]>([]);
@@ -18,8 +18,8 @@ const EventsSlide = () => {
   }, []);
 
   return (
-    <div className="EventsSlide">
-      <div className="EventsSlide-container">
+    <div className={styles.EventsSlide}>
+      <div className={styles.EventsSlide_container}>
         {EventsSildeArray
           ? EventsSildeArray.map((eventS, index) => {
               const urlElem = eventS.url ? (
@@ -27,10 +27,10 @@ const EventsSlide = () => {
               ) : null;
 
               return (
-                <div key={index} className="EventsSlide-text">
-                  <h5 className="EventsSlide-name">{eventS.title}</h5>
+                <div key={index} className={styles.EventsSlide_text}>
+                  <h5 className={styles.EventsSlide_name}>{eventS.title}</h5>
                   {urlElem}
-                  <p className="EventsSlide-date">{eventS.startDt}</p>
+                  <p className={styles.EventsSlide_date}>{eventS.startDt}</p>
                 </div>
               );
             })

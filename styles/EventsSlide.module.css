@@ -10,7 +10,7 @@
   background-color: var(--black-color);
 }
 
-.EventsSlide-container {
+.EventsSlide_container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -21,11 +21,11 @@
   animation-fill-mode: both;
 }
 
-.EventsSlide-container:hover {
+.EventsSlide_container:hover {
   animation-play-state: paused;
 }
 
-.EventsSlide-text {
+.EventsSlide_text {
   margin: 0 1rem;
   text-align: center;
   display: flex;
@@ -34,7 +34,7 @@
   font-weight: bold;
 }
 
-.EventsSlide-date {
+.EventsSlide_date {
   font-style: italic;
   font-weight: bold;
 }
