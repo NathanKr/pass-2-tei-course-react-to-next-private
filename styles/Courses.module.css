@@ -3,12 +3,12 @@
   color: var(--black-color);
 }
 
-.Courses-online-title {
+.Courses_online_title {
   margin: 2rem 0;
   text-align: center;
 }
 
-.Courses-main-container {
+.Courses_main_container {
   max-width: 1200px;
   margin: 0 auto;
 }

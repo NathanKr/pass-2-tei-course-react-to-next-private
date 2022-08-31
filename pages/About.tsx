@@ -1,5 +1,5 @@
-import "./About.css";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
+import styles from "styles/About.module.css";
 
 const nathanProfile = "/images/nathan-profile.jpg";
 const nathanStandPic = "/images/nathan-stand-pic.png";
@@ -9,26 +9,26 @@ const nathanProfile2 = "/images/nathan-profile-wall.jpg";
 
 const About = () => {
   return (
-    <div className="About">
-      <Helmet>
+    <div className={styles.About}>
+      <Head>
         <title>Nathan Krasney | React Courses & Mentoring</title>
         <meta
           name="description"
           content="Let professional teach you web development and mentor you in the way to your first job as a junior web developer. Contact me for more info"
         />
-      </Helmet>
+      </Head>
 
-      <div className="About-img">
+      <div className={styles.About_img}>
         <img src={nathanProfile} alt="img" />
       </div>
 
-      <div className="About-description">
-        <h1 className="About-description-title">Nathan Krasney</h1>
-        <h4 className="About-description-subtitle">
+      <div className={styles.About_description}>
+        <h1 className={styles.About_description_title}>Nathan Krasney</h1>
+        <h4 className={styles.About_description_subtitle}>
           Lead React Instructor | Mentor for Junior Web Developers
         </h4>
 
-        <p className="About-description-details">
+        <p className={styles.About_description_details}>
           I am doing software development for 25+ years.
           I have my own business for mentoring junior web
           developers and teaching courses for the last 10 years.
@@ -39,17 +39,17 @@ const About = () => {
           mentor junior web developer in the way to your first programming job
         </p>
 
-        <div className="About-description-images">
-          <div className="About-description-img-1 img">
+        <div className={styles.About_description_images}>
+          <div className={styles.About_description_img_1} >
             <img src={nathanStandPic} alt="img" />
           </div>
-          <div className="About-description-img-1 img">
+          <div className={styles.About_description_img_1} >
             <img src={present} alt="img" />
           </div>
-          <div className="About-description-img-1 img">
+          <div className={styles.About_description_img_1} >
             <img src={nathanStandPic2} alt="img" />
           </div>
-          <div className="About-description-img-1 img">
+          <div className={styles.About_description_img_1} >
             <img src={nathanProfile2} alt="img" />
           </div>
         </div>

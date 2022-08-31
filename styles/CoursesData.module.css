@@ -4,29 +4,29 @@
   align-self: stretch;
 }
 
-.course-img {
+.course_img {
   position: relative;
 }
 
-.course-img img {
+.course_img img {
   max-width: 100%;
   width: 100%;
   height: 198px;
 }
 
-.course-name-text {
+.course_name_text {
   padding: 1rem 0;
   background-color: var(--black-color);
 }
 
-.course-name-text p {
+.course_name_text p {
   margin: 0;
   text-align: center;
   color: var(--white-color);
   padding: 0 0.5rem;
 }
 
-.course-btn-enroll {
+.course_btn_enroll {
   color: var(--black-color);
   text-decoration: none !important;
   background-color: var(--name-color);
@@ -40,26 +40,26 @@
   transition: color 0.3s ease-in;
 }
 
-.course-btn-enroll:hover {
+.course_btn_enroll:hover {
   color: var(--white-color);
 }
 
-.course-btn-enroll::after {
+.course_btn_enroll::after {
   content: none !important;
 }
 
-.Courses-bootcamps-container {
+.Courses_bootcamps_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.Course-bootcamp {
+.Course_bootcamp {
   position: relative;
 }
 
-.bootcamp-details {
+.bootcamp_details {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -80,29 +80,29 @@
   transition: all 0.3s ease-in;
 }
 
-.bootcamp-details-subtitle {
+.bootcamp_details_subtitle {
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.Course-bootcamp:hover .bootcamp-details {
+.Course_bootcamp:hover .bootcamp_details {
   opacity: 1;
   visibility: visible;
 }
 
 @media screen and (max-width: 670px) {
-  .Courses-bootcamps-container {
+  .Courses_bootcamps_container {
     grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 600px) {
- .bootcamp-details-subtitle {
+ .bootcamp_details_subtitle {
    font-size: 1rem;
    text-align: center;
  }
 
- .bootcamp-details-desc {
+ .bootcamp_details_desc {
    font-size: 0.9rem;
    text-align: center;
  }

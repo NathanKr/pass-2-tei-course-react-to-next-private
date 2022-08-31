@@ -1,32 +1,32 @@
-import "./Contact.css";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
+import styles from "styles/Contact.module.css";
 
 const mailIcon = "/icons/mail.png";
 
 const Contact = () => {
   return (
-    <div className="Contact">
-      <Helmet>
+    <div className={styles.Contact}>
+      <Head>
         <title>Nathan Krasney | React Courses & Mentoring</title>
         <meta
           name="description"
           content="Contact me for details on online react courses, web development bootcamps and mentoring program for junior web developers"
         />
-      </Helmet>
+      </Head>
 
-      <div className="Contact-container">
-        <div className="Contact-img-container">
-          <img src={mailIcon} alt="imgIcon" className="Contact-img" />
+      <div className={styles.Contact_container}>
+        <div className={styles.Contact_img_container}>
+          <img src={mailIcon} alt="imgIcon" className={styles.Contact_img} />
         </div>
 
-        <div className="Contact-info-container">
-          <span className="Contact-info-span">
+        <div className={styles.Contact_info_container}>
+          <span className={styles.Contact_info_span}>
             Email:
-            <span className="Contact-email">natankrasney@gmail.com</span>
+            <span className={styles.Contact_email}>natankrasney@gmail.com</span>
           </span>
-          <span className="Contact-info-span">
+          <span className={styles.Contact_info_span}>
             <a
-              className="Contact-email-list"
+              className={styles.Contact_email_list}
               href="https://next-js-revue-signup.vercel.app/"
             >
               Register to My Email List
