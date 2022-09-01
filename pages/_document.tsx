@@ -11,7 +11,7 @@ export default function Document() {
           src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
           strategy="afterInteractive"
         />
-        <Script strategy="afterInteractive">
+        <Script strategy="afterInteractive" id='id-script-gtag'>
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag() {
@@ -44,7 +44,7 @@ export default function Document() {
         <Main />
         <NextScript />
         {/* SavvyCall start here  */}
-        <Script strategy="lazyOnload">
+        <Script strategy="lazyOnload" id='id-SavvyCall-1'>
           {`
             window.SavvyCal =
             window.SavvyCal ||
@@ -57,7 +57,7 @@ export default function Document() {
           src="https://embed.savvycal.com/v1/embed.js"
           strategy="lazyOnload"
         />
-        <Script strategy="lazyOnload">
+        <Script strategy="lazyOnload" id='id-SavvyCall-2'>
           {`
         SavvyCal("init", {
           widget: {
