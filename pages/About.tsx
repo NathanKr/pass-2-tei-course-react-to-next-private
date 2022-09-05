@@ -54,7 +54,7 @@ const About = () => {
             <Image width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={nathanStandPic2} alt="img" />
           </div>
           <div className={styles.About_description_img_1} >
-            <img width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={nathanProfile2} alt="img" />
+            <Image width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={nathanProfile2} alt="img" />
           </div>
         </div>
       </div>
