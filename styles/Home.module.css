@@ -3,13 +3,12 @@
     min-height: var(--bottom-footer);
     display: flex;
     align-items: center;
-    position: relative;
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.39),
         rgba(0, 0, 0, 0.39)
       ),
-      url("/images/main-pic-2.jpg");
+      url("/images/main-pic-2.jpg"); */
   }
   
   .Home_primary {

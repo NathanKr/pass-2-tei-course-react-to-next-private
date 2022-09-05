@@ -1,11 +1,18 @@
-import type { NextPage } from 'next'
-import Head from 'next/head';
-import EventsSlide from 'src/components/EventsSlide';
-import styles from 'styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import EventsSlide from "src/components/EventsSlide";
+import styles from "styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
     <div className={styles.Home}>
+      <Image
+        src="/images/main-pic-2.jpg"
+        alt="main-pic"
+        layout="fill"
+        objectFit="cover"
+      />
       <Head>
         <title>Nathan Krasney | React Courses & Mentoring</title>
         <meta
@@ -22,6 +29,6 @@ const Home: NextPage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
