@@ -6,6 +6,7 @@ import {
 import useFetch from "../src/hooks/useFetch";
 import ITestemonial from "../src/Interfaces/ITestemonial";
 import Head from "next/head";
+import Image from "next/image";
 
 const Testimonials = () => {
   const array: ITestemonial[] = useFetch("./data/testemonials.json") ?? [];
@@ -18,10 +19,12 @@ const Testimonials = () => {
         <>
           <div className={styles.Testimonials_inner_container_img}>
             <a href={item.href}>
-              <img
+              <Image
                 src={item.img_src}
                 alt="imgTest"
                 className={styles.Testimonials_inner_img}
+                width={item.widthPx}
+                height={item.heightPx}
               />
             </a>
             <h4 className={styles.Testimonials_inner_name}>{item.name}</h4>
@@ -37,7 +40,13 @@ const Testimonials = () => {
       elem = (
         <>
           <h4 className={styles.Testimonials_inner_name}>{item.name}</h4>
-          <img style={{ width: "100%" }} src={item.img_src} alt="" />
+          <Image
+            width={item.widthPx}
+            height={item.heightPx}
+            style={{ width: "100%" }}
+            src={item.img_src}
+            alt=""
+          />
         </>
       );
     }
