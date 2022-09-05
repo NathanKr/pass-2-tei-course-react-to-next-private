@@ -52,7 +52,7 @@
   margin: 1rem;
   max-width: 100%;
   width: 300px;
-  border: 2px solid var(--black-color);
+  /* border: 2px solid var(--black-color); */
   border-radius: 3px;
 }
 

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import styles from "styles/About.module.css";
 
 const nathanProfile = "/images/nathan-profile.jpg";
@@ -6,6 +7,9 @@ const nathanStandPic = "/images/nathan-stand-pic.png";
 const nathanStandPic2 = "/images/nathan-stand-peoples.png";
 const present = "/images/present.jpeg";
 const nathanProfile2 = "/images/nathan-profile-wall.jpg";
+
+const IMAGE_WIDTH_PX = 300;
+const IMAGE_HEIGHT_PX = 240
 
 const About = () => {
   return (
@@ -19,7 +23,7 @@ const About = () => {
       </Head>
 
       <div className={styles.About_img}>
-        <img src={nathanProfile} alt="img" />
+        <Image width={1068} height={712} src={nathanProfile} alt="img" />
       </div>
 
       <div className={styles.About_description}>
@@ -41,16 +45,16 @@ const About = () => {
 
         <div className={styles.About_description_images}>
           <div className={styles.About_description_img_1} >
-            <img src={nathanStandPic} alt="img" />
+            <Image width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={nathanStandPic} alt="img" />
           </div>
           <div className={styles.About_description_img_1} >
-            <img src={present} alt="img" />
+            <Image width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={present} alt="img" />
           </div>
           <div className={styles.About_description_img_1} >
-            <img src={nathanStandPic2} alt="img" />
+            <Image width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={nathanStandPic2} alt="img" />
           </div>
           <div className={styles.About_description_img_1} >
-            <img src={nathanProfile2} alt="img" />
+            <img width={IMAGE_WIDTH_PX} height={IMAGE_HEIGHT_PX} src={nathanProfile2} alt="img" />
           </div>
         </div>
       </div>
