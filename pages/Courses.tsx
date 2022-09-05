@@ -3,6 +3,7 @@ import stylesCoursesData from  "styles/CoursesData.module.css";
 import ICourse from "../src/Interfaces/ICourse";
 import useFetch from "../src/hooks/useFetch";
 import Head from "next/head";
+import Image from "next/image";
 
 const Courses = () => {
   const onlineCoursesArray: ICourse[] =
@@ -11,9 +12,11 @@ const Courses = () => {
   const onlineCourses = onlineCoursesArray.map((course, index) => (
     <div key={index} className={stylesCoursesData.courseOnline}>
       <div className={stylesCoursesData.course_img}>
-        <img
+        <Image
           src={course.imgSrc}
           alt="coursePic"
+          layout="fill"
+          objectFit="cover"
         />
         <a href={course.href} className={stylesCoursesData.course_btn_enroll}>
           Enroll

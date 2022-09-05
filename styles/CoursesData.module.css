@@ -6,13 +6,16 @@
 
 .course_img {
   position: relative;
-}
-
-.course_img img {
   max-width: 100%;
   width: 100%;
   height: 198px;
 }
+/* 
+.course_img img {
+  max-width: 100%;
+  width: 100%;
+  height: 198px;
+} */
 
 .course_name_text {
   padding: 1rem 0;
