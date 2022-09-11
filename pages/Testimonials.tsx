@@ -7,11 +7,29 @@ import useFetch from "../src/hooks/useFetch";
 import ITestemonial from "../src/Interfaces/ITestemonial";
 import Head from "next/head";
 import Image from "next/image";
+import { getHostUrl } from "src/logic/utils";
+import { FC } from "react";
 
-const Testimonials = () => {
-  const array: ITestemonial[] = useFetch("./data/testemonials.json") ?? [];
+interface IProps {
+  testemonials : ITestemonial[]
+}
 
-  const items = array.map((item, index) => {
+export async function getStaticProps() {
+  let props : IProps = {testemonials : []}
+
+  const res = await fetch(`${getHostUrl()}/api/testemonials`);
+  props.testemonials = await res.json()
+
+
+  return {
+    props // will be passed to the page component as props
+  }
+}
+
+
+const Testimonials : FC<IProps>= ({testemonials}) => {
+
+  const items = testemonials.map((item, index) => {
     let elem;
 
     if (item.testimonial_category === testimonial_category_student) {
