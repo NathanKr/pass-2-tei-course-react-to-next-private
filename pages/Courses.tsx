@@ -14,8 +14,9 @@ interface IProps{
 export async function getStaticProps() {
   let props : IProps = {courses : []}
 
-  const res = await fetch(`${getHostUrl()}/api/courses`);
-  props.courses = await res.json()
+  // const res = await fetch(`${getHostUrl()}/api/courses`);
+  // props.courses = await res.json()
+  props.courses = [];
 
   return {
     props // will be passed to the page component as props
