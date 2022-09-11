@@ -4,12 +4,28 @@ import ICourse from "../src/Interfaces/ICourse";
 import useFetch from "../src/hooks/useFetch";
 import Head from "next/head";
 import Image from "next/image";
+import { FC } from "react";
+import { getHostUrl } from "src/logic/utils";
 
-const Courses = () => {
-  const onlineCoursesArray: ICourse[] =
-    useFetch("/data/onlinesCourses.json") ?? [];
+interface IProps{
+  courses : ICourse[]
+}
 
-  const onlineCourses = onlineCoursesArray.map((course, index) => (
+export async function getStaticProps() {
+  let props : IProps = {courses : []}
+
+  const res = await fetch(`${getHostUrl()}/api/courses`);
+  props.courses = await res.json()
+
+  return {
+    props // will be passed to the page component as props
+  }
+}
+
+
+const Courses : FC<IProps> = ({courses}) => {
+
+  const onlineCourses = courses.map((course, index) => (
     <div key={index} className={stylesCoursesData.courseOnline}>
       <div className={stylesCoursesData.course_img}>
         <Image

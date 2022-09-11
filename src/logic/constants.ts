@@ -1,0 +1,1 @@
+export const PRODUCRION_SERVER_URL = 'https://pass-2-tei-course-react-to-next-private.vercel.app';
