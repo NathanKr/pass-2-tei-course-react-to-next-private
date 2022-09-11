@@ -1,11 +1,28 @@
 import Event from "src/components/Event";
 import styles from "styles/Events.module.css";
-import useFetch from "src/hooks/useFetch";
 import IEvent, { IUrl } from "../src/Interfaces/IEvent";
 import Head from "next/head";
+import { getHostUrl } from "src/logic/utils";
+import { FC } from "react";
 
-const Events = () => {
-  const events: IEvent[] = useFetch("/data/eventSlide.json") ?? [];
+interface IProps{
+  events : IEvent []
+}
+
+
+export async function getStaticProps() {
+  let props : IProps = {events : []};
+  
+  const res = await fetch(`${getHostUrl()}/api/events`);
+  props.events = await res.json()
+
+  return {
+    props // will be passed to the page component as props
+  }
+}
+
+
+const Events : FC<IProps>= ({events}) => {
 
   const elements = events.map((item, index) => {
     return (

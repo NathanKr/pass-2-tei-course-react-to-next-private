@@ -3,7 +3,6 @@ import {
   testimonial_category_student,
   testimonial_category_organization,
 } from "../src/logic/testimonialCategories";
-import useFetch from "../src/hooks/useFetch";
 import ITestemonial from "../src/Interfaces/ITestemonial";
 import Head from "next/head";
 import Image from "next/image";

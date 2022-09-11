@@ -1,7 +1,6 @@
 import stylesCourses from  "styles/Courses.module.css";
 import stylesCoursesData from  "styles/CoursesData.module.css";
 import ICourse from "../src/Interfaces/ICourse";
-import useFetch from "../src/hooks/useFetch";
 import Head from "next/head";
 import Image from "next/image";
 import { FC } from "react";
