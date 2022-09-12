@@ -10,8 +10,8 @@ const Home: NextPage = () => {
       <Image
         src="/images/main-pic-2.jpg"
         alt="main-pic"
-        layout="fill"
-        objectFit="cover"
+        width={1920}
+        height={1280}
       />
       <Head>
         <title>Nathan Krasney | React Courses & Mentoring</title>
