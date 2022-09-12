@@ -32,6 +32,7 @@ const Courses : FC<IProps> = ({courses}) => {
           alt="coursePic"
           layout="fill"
           objectFit="cover"
+          priority ={index == 0 ? true : false}
         />
         <a href={course.href} className={stylesCoursesData.course_btn_enroll}>
           Enroll
