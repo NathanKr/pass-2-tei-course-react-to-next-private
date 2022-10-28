@@ -28,61 +28,61 @@ const Top = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto"></Nav>
               <Nav>
-                <Link href="/">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     Home
-                  </a>
+                  
                 </Link>
-                <Link href="/About">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/About"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     About
-                  </a>
+                  
                 </Link>
-                <Link href="/Contact">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/Contact"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     Contact
-                  </a>
+                  
                 </Link>
-                <Link href="/Courses">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/Courses"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     Courses
-                  </a>
+                  
                 </Link>
-                <Link href="/Mentoring">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/Mentoring"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     Mentoring
-                  </a>
+                  
                 </Link>
-                <Link href="/Testimonials">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/Testimonials"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     Testimonials
-                  </a>
+                  
                 </Link>
-                <Link href="/Events">
-                  <a
-                    onClick={() => setNavExpended(false)}
-                    className={styles.navigationLink}
-                  >
+                <Link
+                  href="/Events"
+                  onClick={() => setNavExpended(false)}
+                  className={styles.navigationLink}>
+                  
                     Events
-                  </a>
+                  
                 </Link>
               </Nav>
             </Navbar.Collapse>
